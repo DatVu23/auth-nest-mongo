@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
+import { DrinkModule } from './drink/drink.module';
 
 @Module({
 	imports: [
@@ -15,6 +16,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 			dbName: process.env.DB_NAME,
 		}),
 		AuthModule,
+		DrinkModule,
 	],
 	controllers: [AppController],
 	providers: [AppService],
